@@ -5,22 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title id="title">Survey form</title>
+    <h1 id="title">Survey form</h1>
     <p id="description">Short explanation</p>
 </head>
 <body>
-    <form class="survey-form" id="new_user_form">
+    <form class="survey" id="survey-form">
         <h2>Who are you?</h2>
         <h4>Name</h4>
-        <input class="form-fields" type="text" name="name" id="name" placeholder="Please enter your name">
-        <label for="name" id="name-label"></label>
+        <input class="form-fields" type="text" name="name" id="name" placeholder="Please enter your name" required>
+        <label for="name" id="name-label">label name</label>
         <h4>e-mail</h4>
-        <input class="form-fields" type="text" name="email" id="email" placeholder="Enter your email address">
-        <label for="email" id="email-label"></label>
+        <input class="form-fields" type="email" name="email" id="email" placeholder="Enter your email address" required>
+        <label for="email" id="email-label">label email</label>
         <h4>Number</h4>
-        <input class="form-fields" type="text" name="number" id="number" placeholder="Enter your ID">
-        <label for="number" id="number-label"></label>
-        <button id = "submit" class="buttons" type="button"  style="float: center;">Submit</button>
+        <input class="form-fields" type="number" name="number" id="number" min="0" max="100" placeholder="Enter your ID">
+        <label for="number" id="number-label">label number</label>
+        <h4>Suan, fon or zon?</h4>
+        <select class ="form-fields" name="dropdown" id="dropdown">
+            <option value="suan">suan</option>
+            <option value="fon">fon</option>
+            <option value="zon">zon</option>
+        </select>
+        <label for="dropdown" id="dropdown-label">label dropdown</label>
+        <h4>Who is the real one?</h4>
+        <input class="form-fields" type="radio" name="radio-buttons" id="ziggy" value="ziggy">
+        <label for="ziggy" id="ziggy-label">Ziggy Stardust</label><br>
+        <input class="form-fields" type="radio" name="radio-buttons" id="david" value="david">
+        <label for="david" id="david-label">David Bowie</label><br>
+        <input class="form-fields" type="radio" name="radio-buttons" id="aladdin" value="aladdin">
+        <label for="aladdin" id="aladdin-label">Aladdin Sane</label><br>
+        <input class="form-fields" type="radio" name="radio-buttons" id="duke" value="duke">
+        <label for="duke" id="duke-label">The White Duke</label><br>
+        <h4>Music genre?</h4>
+        <input class="form-fields" type="checkbox" name="checkboxes" id="pop" value="pop">
+        <label for="pop" id="pop-label">Pop</label><br>
+        <input class="form-fields" type="checkbox" name="checkboxes" id="rock" value="rock">
+        <label for="rock" id="rock-label">Rock</label><br>
+        <input class="form-fields" type="checkbox" name="checkboxes" id="funk" value="funk">
+        <label for="funk" id="funk-label">Funk</label><br>
+        <input class="form-fields" type="checkbox" name="checkboxes" id="disco" value="disco">
+        <label for="disco" id="disco-label">Disco</label><br>
+        <h4>Comments?</h4>
+        <textarea class ="form-fields" name="textarea" id="textarea" cols="30" rows="10"></textarea><br>
+        <button id="submit" class="buttons" type="submit"  style="float: center;">Submit</button>
+    
     </form>
 </body>
 </html>
